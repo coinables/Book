@@ -1,0 +1,1 @@
+$url = "http://127.0.0.1:3030/merchant/YOUR-GUID/new_address?password=YOUR-PASSWORD&api_code=YOUR-API-CODE";

@@ -1,0 +1,10 @@
+.btn{
+  padding: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #666;
+  font-weight: strong;
+}

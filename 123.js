@@ -1,0 +1,1 @@
+var amount = document.getElementById("btc").value;

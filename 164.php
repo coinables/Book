@@ -1,0 +1,1 @@
+$bitcoin = new Bitcoin("username", "somepassword");

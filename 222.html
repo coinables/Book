@@ -1,0 +1,19 @@
+<table>
+<tr>
+<td>ID</td><td>TARGET</td><td>GUESS</td><td>WIN/LOSE</td>
+</tr>
+<?php
+//user stats
+$userStats = "SELECT * FROM games WHERE PLAYER = '$userid' ORDERBY GAMEID DESC LIMIT 20";
+$doUserStats = mysqli_query($conn, $userStats);
+  while($dumpStats=mysqli_fetch_assoc($doUserStats))
+  {
+    echo "<tr>";
+    echo "<td>".$dumpStats['GAMEID']."</td>";
+    echo "<td>".$dumpStats['TARGET']."</td>";
+    echo "<td>".$dumpStats['GUESS']."</td>";
+    echo "<td>".$dumpStats['WINLOSE']."</td>";
+    echo "</tr>";
+  }
+?>
+</table>

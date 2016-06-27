@@ -1,0 +1,10 @@
+<script>
+	$(document).ready(function(){
+     	refreshData();
+    	});
+	function refreshData(){
+ 		$('#container').load('data.php', function(){
+ 		setTimeout(refreshData, 15000);
+ 		});
+ 	}
+</script>

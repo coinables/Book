@@ -1,0 +1,1 @@
+$receive_url = "https://api.blockchain.info/v2/receive?key=".$api_key."&xpub=".$xpub."&callback=."url_encode($callback);

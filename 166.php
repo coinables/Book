@@ -1,0 +1,1 @@
+$info = $bitcoin->getnewaddress("Nakamoto");

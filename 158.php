@@ -1,0 +1,1 @@
+/new_address?password=YOUR-PASSWORD&api_code=YOUR-API-CODE&label=ORDER_ID";

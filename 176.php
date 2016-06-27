@@ -1,0 +1,1 @@
+$doAddUser = mysqli_query($conn, $addUser) or die(mysqli_error($conn));

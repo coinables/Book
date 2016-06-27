@@ -1,0 +1,1 @@
+$addUser = "INSERT INTO siteusers (userid, username, address) VALUES('$uid', '$username', '$addy')");

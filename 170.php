@@ -1,0 +1,1 @@
+$send = $bitcoin->sendtoaddress("1SomeBitcoinAddy", 1);

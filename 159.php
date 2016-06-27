@@ -1,0 +1,1 @@
+/payment?password=PW&api_code=YOUR-API-CODE&to=BTC_ADDY&amount=20000";

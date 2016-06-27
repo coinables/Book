@@ -1,0 +1,16 @@
+<script>
+var btc = <?php echo $json["btc_usd"]["last"]; ?>;
+function btcConvert(){
+ var amount = document.getElementById("btc").value;
+ var btcCalc = amount * btc;
+ var btcCalc = btcCalc.toFixed(2);
+ document.getElementById("usd").value = btcCalc;
+};
+
+function usdConvert(){
+ var usd = document.getElementById("usd").value;
+ var usdCalc =  usd / btc;
+ var usdCalc = usdCalc.toFixed(8);
+ document.getElementById("btc").value = usdCalc;
+}
+</script>
