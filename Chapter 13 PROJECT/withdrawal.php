@@ -33,12 +33,13 @@ $addy = trim($_POST['address']);
 //validate
 $checkAddy = $bitcoin->validateaddress($addy);
 $isValid = $checkAddy['isvalid'];
+$isMine = $checkAddy['ismine']; 
 	if($balance < 1000){
-	$message = "You need at least 1000 to withdrawal";
+	$message = "You need at least 1000 to withdraw";
 	} else {
 		if(!$isValid){
 		$message = "Address is invalid";
-		} else {
+		} elseif(!$isMine){
 		//process withdrawal
 		$convertBalance = $balance / 100000000;
 		$convertBalance = number_format($convertBalance, 8);
@@ -47,6 +48,8 @@ $isValid = $checkAddy['isvalid'];
 		//reset users balance to zero
 		$updateBalance = "UPDATE users SET BALANCE = 0 WHERE USERID = '$userid'";
 		$doUpdateBalance = mysqli_query($conn, $updateBalance);
+		}else {
+		$message = "You cannot withdraw to that address";
 		}
 	}
 }
