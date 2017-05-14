@@ -10,6 +10,8 @@ require("easybitcoin.php");
 $bitcoin = new Bitcoin("someusername", "somepassword");
 
 $tx = $_GET['tx'];
+//sanitize
+$tx = mysqli_real_escape_string($conn, $tx);
 $getTrans = $bitcoin->gettransaction($tx);
 $confirmations = $getTrans["confirmations"];
 if($confirmations < 1){
