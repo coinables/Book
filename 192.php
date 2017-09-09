@@ -1,6 +1,6 @@
-$url = "https://btc-e.com/api/2/btc_usd/ticker";
+$url = "https://coinbase.com/api/v1/prices/spot_rate";
 $json = json_decode(file_get_contents($url), true);
-$price = $json["ticker"]["last"];
+$price = $json["amount"];
 $usdPrice = $_SESSION['cost']; 
 $calc = $usdPrice / $price;
 $itemPrice = round($calc, 4);
